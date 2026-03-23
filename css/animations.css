@@ -1,53 +1,39 @@
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
+/* ============================================
+   LUXURY ANIMATIONS & TRANSITIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(60px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.hero-content,
-.category-card,
-.product-card {
-    animation: fadeIn 0.8s ease forwards;
-}
-
-.category-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.category-card:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-/* Hover Effects */
-.product-card,
-.category-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Loading Spinner */
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
-.spinner {
-    width: 40px;
-    height: 40px;
-    border: 3px solid #e5e5e5;
-    border-top-color: #000000;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-/* Cart Toast Notification */
-@keyframes slideIn {
+@keyframes slideInRight {
     from {
         transform: translateX(100%);
         opacity: 0;
@@ -58,14 +44,150 @@
     }
 }
 
-.toast-notification {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #000000;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 4px;
-    animation: slideIn 0.3s ease;
-    z-index: 2000;
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes subtleGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px 5px rgba(212, 175, 55, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+}
+
+/* Hero Animation */
+.hero-content {
+    animation: fadeInUp 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Staggered Card Animations */
+.category-card,
+.product-card,
+.value-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.category-card:nth-child(1) { animation-delay: 0.1s; }
+.category-card:nth-child(2) { animation-delay: 0.2s; }
+.category-card:nth-child(3) { animation-delay: 0.3s; }
+
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.1s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.2s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.3s; }
+.product-card:nth-child(7) { animation-delay: 0.35s; }
+.product-card:nth-child(8) { animation-delay: 0.4s; }
+
+.value-card:nth-child(1) { animation-delay: 0.1s; }
+.value-card:nth-child(2) { animation-delay: 0.2s; }
+.value-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Hover Effects */
+.product-card,
+.category-card,
+.value-card {
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Gold Glow on Hover */
+.btn-primary:hover,
+.btn-secondary:hover,
+.add-to-cart:hover {
+    animation: subtleGlow 0.8s ease;
+}
+
+/* Image Zoom with Ease */
+.product-image img,
+.category-image img {
+    transition: transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Scroll Reveal */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header Scroll Transition */
+.header {
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Logo Hover Effect */
+.logo-img {
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.02);
+}
+
+/* Button Ripple Effect */
+.btn-primary,
+.btn-secondary,
+.add-to-cart {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.4);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Loading Skeleton */
+.skeleton {
+    background: linear-gradient(90deg, var(--platinum) 25%, var(--pearl) 50%, var(--platinum) 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Gold Line Animation */
+.gold-line {
+    position: relative;
+}
+
+.gold-line::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold-subtle), transparent);
+    transition: width 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.gold-line:hover::after {
+    width: 100%;
 }
