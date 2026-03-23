@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Classic Men Suits - Premium classic men's attire for the discerning gentleman.">
+    <title>The Classic Men Suits | Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="asset/logoclassic.PNG" alt="The Classic Men Suits" class="logo-img">
+                <span class="logo-text">THE CLASSIC MEN SUITS</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="menu-icon">☰</span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span class="cart-symbol">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">TIMELESS ELEGANCE</h1>
+            <p class="hero-subtitle">Discover the art of classic tailoring, crafted for the modern gentleman.</p>
+            <a href="shop.html" class="btn-primary">EXPLORE COLLECTION</a>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">CRAFTED FOR DISTINCTION</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="asset/suit1.PNG" alt="Tailored Suits">
+                    </div>
+                    <h3>TAILORED SUITS</h3>
+                    <p>Exquisite fabrics, impeccable fit</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="asset/boots1.PNG" alt="Footwear">
+                    </div>
+                    <h3>PREMIUM FOOTWEAR</h3>
+                    <p>Handcrafted leather boots</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="asset/suit2.PNG" alt="Bespoke Service">
+                    </div>
+                    <h3>BESPOKE SERVICE</h3>
+                    <p>Made-to-measure excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">EDITOR'S PICK</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products loaded via JS -->
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="shop.html" class="btn-secondary">VIEW ALL PRODUCTS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>THE CLASSIC JOURNAL</h2>
+            <p>Subscribe for exclusive offers, style guides, and new arrivals.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn-secondary">SUBSCRIBE</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>THE CLASSIC MEN SUITS</h3>
+                <p>Est. 1985 — Masters of classic tailoring for the discerning gentleman.</p>
+            </div>
+            <div class="footer-section">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="shop.html">Suits</a></li>
+                    <li><a href="shop.html">Footwear</a></li>
+                    <li><a href="shop.html">Accessories</a></li>
+                    <li><a href="shop.html">Bespoke</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>FOLLOW US</h4>
+                <div class="social-links">
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">FACEBOOK</a>
+                    <a href="#">TWITTER</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Classic Men Suits. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
